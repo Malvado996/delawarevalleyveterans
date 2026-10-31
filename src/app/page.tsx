@@ -12,6 +12,8 @@ import { Placeholder } from "@/components/site/placeholder";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const sections = [
   {
     href: "/mission",
@@ -48,6 +50,19 @@ export default function Home() {
           className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 bg-[repeating-linear-gradient(180deg,transparent_0,transparent_28px,rgba(179,25,66,0.35)_28px,rgba(179,25,66,0.35)_56px)] md:block"
         />
         <div className="relative mx-auto max-w-5xl px-4 py-20 sm:py-28">
+          {/* Decorative eagle over the red stripes; lg+ only so it never overlaps the text. */}
+          <picture className="pointer-events-none absolute top-1/2 right-4 hidden -translate-y-1/2 lg:block">
+            <source srcSet={`${basePath}/logo/dvv-logo-hero.webp`} type="image/webp" />
+            {/* eslint-disable-next-line @next/next/no-img-element -- static export, images unoptimized */}
+            <img
+              src={`${basePath}/logo/dvv-logo-hero.png`}
+              alt=""
+              aria-hidden="true"
+              width={657}
+              height={384}
+              className="h-40 w-auto drop-shadow-[0_4px_14px_rgba(0,0,0,0.35)] xl:h-48"
+            />
+          </picture>
           <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-blue-200">
             <StarMark className="size-4 text-brand-red-light" />
             A {site.taxStatus} veterans organization

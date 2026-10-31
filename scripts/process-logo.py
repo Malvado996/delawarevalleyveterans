@@ -42,3 +42,11 @@ small = canvas.resize((w, h), Image.LANCZOS)
 small.save(f"{OUT}/dvv-logo.png", optimize=True)
 small.save(f"{OUT}/dvv-logo.webp", quality=90, method=6)
 print("ink luminance", ink, "bbox", bbox, "master", canvas.size, "small", small.size)
+
+# Larger variant for the homepage hero (displayed up to 192px tall -> 2x = 384).
+h = 384
+w = round(canvas.width * h / canvas.height)
+hero = canvas.resize((w, h), Image.LANCZOS)
+hero.save(f"{OUT}/dvv-logo-hero.png", optimize=True)
+hero.save(f"{OUT}/dvv-logo-hero.webp", quality=90, method=6)
+print("hero", hero.size)
