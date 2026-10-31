@@ -49,20 +49,21 @@ export default function Home() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 bg-[repeating-linear-gradient(180deg,transparent_0,transparent_28px,rgba(179,25,66,0.35)_28px,rgba(179,25,66,0.35)_56px)] md:block"
         />
+        {/* Decorative eagle centered over the red stripes (right half, 75% of the section),
+          but never closer than 32px to the hero text column; lg+ only. */}
+        <picture className="pointer-events-none absolute top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:left-[max(75%,calc(max(0px,50%_-_512px)_+_817px))] lg:block xl:left-[max(75%,calc(50%_-_512px_+_845px))]">
+          <source srcSet={`${basePath}/logo/dvv-logo-hero.webp`} type="image/webp" />
+          {/* eslint-disable-next-line @next/next/no-img-element -- static export, images unoptimized */}
+          <img
+            src={`${basePath}/logo/dvv-logo-hero.png`}
+            alt=""
+            aria-hidden="true"
+            width={657}
+            height={384}
+            className="h-40 w-auto drop-shadow-[0_4px_14px_rgba(0,0,0,0.35)] xl:h-48"
+          />
+        </picture>
         <div className="relative mx-auto max-w-5xl px-4 py-20 sm:py-28">
-          {/* Decorative eagle over the red stripes; lg+ only so it never overlaps the text. */}
-          <picture className="pointer-events-none absolute top-1/2 right-4 hidden -translate-y-1/2 lg:block">
-            <source srcSet={`${basePath}/logo/dvv-logo-hero.webp`} type="image/webp" />
-            {/* eslint-disable-next-line @next/next/no-img-element -- static export, images unoptimized */}
-            <img
-              src={`${basePath}/logo/dvv-logo-hero.png`}
-              alt=""
-              aria-hidden="true"
-              width={657}
-              height={384}
-              className="h-40 w-auto drop-shadow-[0_4px_14px_rgba(0,0,0,0.35)] xl:h-48"
-            />
-          </picture>
           <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-blue-200">
             <StarMark className="size-4 text-brand-red-light" />
             A {site.taxStatus} veterans organization
