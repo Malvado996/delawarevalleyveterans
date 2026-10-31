@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { ContactForm } from "@/components/site/contact-form";
 import { PageHeader } from "@/components/site/page-header";
@@ -54,14 +54,6 @@ export default function ContactPage() {
               </dt>
               <dd className="mt-1 break-words">
                 <Placeholder>{site.email}</Placeholder>
-              </dd>
-            </div>
-            <div>
-              <dt className="flex items-center gap-2 font-semibold">
-                <Phone className="size-4 text-brand-red" aria-hidden="true" /> Phone
-              </dt>
-              <dd className="mt-1">
-                <Placeholder>{site.phone}</Placeholder>
               </dd>
             </div>
           </dl>

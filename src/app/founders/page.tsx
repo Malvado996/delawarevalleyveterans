@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { PageHeader } from "@/components/site/page-header";
 import { Placeholder, PlaceholderNotice } from "@/components/site/placeholder";
@@ -76,11 +76,6 @@ export default function FoundersPage() {
                       <Mail className="size-4 text-brand-navy" aria-hidden="true" />
                       <span className="sr-only">Email:</span>
                       <Placeholder>{f.email}</Placeholder>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <Phone className="size-4 text-brand-navy" aria-hidden="true" />
-                      <span className="sr-only">Phone:</span>
-                      <Placeholder>{f.phone}</Placeholder>
                     </p>
                   </CardFooter>
                 </Card>

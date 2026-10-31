@@ -10,7 +10,6 @@ export const site = {
   taxStatus: "501(c)(19)",
   ein: "[EIN — PLACEHOLDER]",
   email: "[contact email — PLACEHOLDER, e.g. info@delawarevalleyveterans.org]",
-  phone: "[phone number — PLACEHOLDER]",
   mailingAddress: [
     "[Street address — PLACEHOLDER]",
     "[City, State ZIP — PLACEHOLDER]",
@@ -36,7 +35,6 @@ export type Founder = {
   branchPlaceholder?: string;
   bio: string;
   email: string; // placeholder until confirmed
-  phone: string; // placeholder until confirmed
 };
 
 /**
@@ -53,7 +51,6 @@ export const founders: Founder[] = [
     service: "U.S. Marine Corps Reserve · Deployed to Iraq",
     bio: "Philip Rodrigues served in the U.S. Marine Corps Reserve and deployed to Iraq. As a founding board member of Delaware Valley Veterans, he is committed to helping fellow veterans find purpose and community through agriculture, recreational therapy, and hands-on job training.",
     email: "[Email TBD]",
-    phone: "[Phone TBD]",
   },
   {
     id: "jake",
@@ -63,7 +60,6 @@ export const founders: Founder[] = [
     service: "U.S. Air Force (full-time) · Deployed to Iraq",
     bio: "Jake served full-time in the U.S. Air Force and deployed to Iraq. As a founding board member, he is dedicated to building practical pathways for veterans, from job training in agriculture to food pantries that support veterans and their families.",
     email: "[Email TBD]",
-    phone: "[Phone TBD]",
   },
   {
     id: "chase-girvin",
@@ -73,6 +69,5 @@ export const founders: Founder[] = [
     service: "U.S. Marines · Global War on Terrorism era",
     bio: "He served in the Marines during the Global War on Terrorism era. As a founding board member, he helps lead the organization's work to connect veterans with the land, with meaningful work, and with each other.",
     email: "[Email TBD]",
-    phone: "[Phone TBD]",
   },
 ];
