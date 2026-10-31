@@ -19,7 +19,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-brand-navy text-white shadow-sm">
       <div className="h-1 bg-brand-red" aria-hidden="true" />
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
+      <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-2.5 sm:gap-4">
         <Link
           href="/"
           className="flex min-w-0 items-center gap-2.5 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
@@ -34,13 +34,13 @@ export function SiteHeader() {
               aria-hidden="true"
               width={274}
               height={160}
-              className="h-8 w-auto min-[400px]:h-10 sm:h-12"
+              className="h-10 w-auto min-[400px]:h-[52px] sm:h-16"
             />
           </picture>
-          <span className="font-script whitespace-nowrap text-[1.45rem] leading-none min-[400px]:text-[1.7rem] tracking-[0.01em] [-webkit-text-stroke:0.4px_currentColor] [paint-order:stroke_fill] [text-shadow:0_0_0.4px_currentColor,0_1px_1px_rgb(0_0_0/0.35)] sm:text-[2rem]">{site.name}</span>
+          <span className="font-script whitespace-nowrap text-[1.3rem] leading-none min-[400px]:text-[1.5rem] tracking-[0.01em] [-webkit-text-stroke:0.4px_currentColor] [paint-order:stroke_fill] [text-shadow:0_0_0.4px_currentColor,0_1px_1px_rgb(0_0_0/0.35)] sm:text-[2rem]">{site.name}</span>
         </Link>
 
-        <nav aria-label="Main" className="hidden md:block">
+        <nav aria-label="Main" className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {site.nav.map((item) => {
               const active = pathname === item.href;
@@ -68,7 +68,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-white md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-white lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
@@ -79,7 +79,7 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <nav id="mobile-nav" aria-label="Main" className="border-t border-white/10 md:hidden">
+        <nav id="mobile-nav" aria-label="Main" className="border-t border-white/10 lg:hidden">
           <ul className="mx-auto flex max-w-5xl flex-col px-4 py-2">
             {site.nav.map((item) => {
               const active = pathname === item.href;
