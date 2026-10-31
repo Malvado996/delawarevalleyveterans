@@ -54,7 +54,7 @@ export default function FoundersPage() {
                           Founding Board Member ·{" "}
                           <Placeholder>{f.boardTitle}</Placeholder>
                         </p>
-                        <p className="mt-1 text-sm font-medium text-brand-red">
+                        <p className="mt-1 font-label text-sm font-bold text-brand-red">
                           {f.service}
                           {f.branchPlaceholder ? (
                             <>

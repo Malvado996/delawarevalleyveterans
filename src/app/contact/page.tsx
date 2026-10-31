@@ -35,7 +35,7 @@ export default function ContactPage() {
           </h2>
           <dl className="mt-4 space-y-4 text-sm">
             <div>
-              <dt className="flex items-center gap-2 font-semibold">
+              <dt className="flex items-center gap-2 font-label font-bold">
                 <MapPin className="size-4 text-brand-red" aria-hidden="true" /> Mailing address
               </dt>
               <dd className="mt-1">
@@ -49,7 +49,7 @@ export default function ContactPage() {
               </dd>
             </div>
             <div>
-              <dt className="flex items-center gap-2 font-semibold">
+              <dt className="flex items-center gap-2 font-label font-bold">
                 <Mail className="size-4 text-brand-red" aria-hidden="true" /> Email
               </dt>
               <dd className="mt-1 break-words">
