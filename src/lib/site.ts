@@ -29,12 +29,13 @@ export type Founder = {
   firstName: string;
   /** Real last name, or a bracketed placeholder rendered in amber. */
   lastName: { value: string; placeholder: boolean };
-  boardTitle: string; // placeholder until confirmed
+  /** Board office, shown prominently on the card. */
+  title: string;
   /** Short service summary; `branchPlaceholder` is shown in amber if set. */
   service: string;
   branchPlaceholder?: string;
   bio: string;
-  email: string; // placeholder until confirmed
+  email: string;
 };
 
 /**
@@ -44,30 +45,30 @@ export type Founder = {
  */
 export const founders: Founder[] = [
   {
+    id: "chase-girvin",
+    firstName: "Chase",
+    lastName: { value: "Girvin", placeholder: false },
+    title: "President",
+    service: "U.S. Marines · Global War on Terrorism era",
+    bio: "He served in the Marines during the Global War on Terrorism era. As a founding board member, he helps lead the organization's work to connect veterans with the land, with meaningful work, and with each other.",
+    email: "chase@delawarevalleyveterans.org",
+  },
+  {
     id: "philip-rodrigues",
     firstName: "Philip",
     lastName: { value: "Rodrigues", placeholder: false },
-    boardTitle: "[Board title TBD]",
+    title: "Vice President",
     service: "U.S. Marine Corps · Deployed to Iraq",
     bio: "Philip Rodrigues served in the U.S. Marine Corps and deployed to Iraq. As a founding board member of Delaware Valley Veterans, he is committed to helping fellow veterans find purpose and community through agriculture, recreational therapy, and hands-on job training.",
-    email: "[Email TBD]",
+    email: "philip@delawarevalleyveterans.org",
   },
   {
     id: "jake",
     firstName: "Jake",
     lastName: { value: "[Last name TBD]", placeholder: true },
-    boardTitle: "[Board title TBD]",
+    title: "Secretary/Treasurer",
     service: "U.S. Air Force · Deployed to Iraq",
     bio: "Jake served in the U.S. Air Force and deployed to Iraq. As a founding board member, he is dedicated to building practical pathways for veterans, from job training in agriculture to food pantries that support veterans and their families.",
-    email: "[Email TBD]",
-  },
-  {
-    id: "chase-girvin",
-    firstName: "Chase",
-    lastName: { value: "Girvin", placeholder: false },
-    boardTitle: "[Board title TBD]",
-    service: "U.S. Marines · Global War on Terrorism era",
-    bio: "He served in the Marines during the Global War on Terrorism era. As a founding board member, he helps lead the organization's work to connect veterans with the land, with meaningful work, and with each other.",
-    email: "[Email TBD]",
+    email: "jake@delawarevalleyveterans.org",
   },
 ];

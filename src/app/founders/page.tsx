@@ -50,10 +50,10 @@ export default function FoundersPage() {
                             f.lastName.value
                           )}
                         </h2>
-                        <p className="mt-1 text-sm">
-                          Founding Board Member ·{" "}
-                          <Placeholder>{f.boardTitle}</Placeholder>
+                        <p className="mt-1 font-heading text-base font-semibold italic text-brand-red">
+                          {f.title}
                         </p>
+                        <p className="mt-0.5 text-sm">Founding Board Member</p>
                         <p className="mt-1 font-label text-sm font-bold text-brand-red">
                           {f.service}
                           {f.branchPlaceholder ? (
@@ -75,7 +75,12 @@ export default function FoundersPage() {
                     <p className="flex items-center gap-2">
                       <Mail className="size-4 text-brand-navy" aria-hidden="true" />
                       <span className="sr-only">Email:</span>
-                      <Placeholder>{f.email}</Placeholder>
+                      <a
+                        href={`mailto:${f.email}`}
+                        className="break-all font-medium text-brand-navy underline underline-offset-4 hover:text-brand-red"
+                      >
+                        {f.email}
+                      </a>
                     </p>
                   </CardFooter>
                 </Card>
