@@ -57,8 +57,8 @@ export const founders: Founder[] = [
     firstName: "Jake",
     lastName: { value: "[Last name TBD]", placeholder: true },
     boardTitle: "[Board title TBD]",
-    service: "U.S. Air Force (full-time) · Deployed to Iraq",
-    bio: "Jake served full-time in the U.S. Air Force and deployed to Iraq. As a founding board member, he is dedicated to building practical pathways for veterans, from job training in agriculture to food pantries that support veterans and their families.",
+    service: "U.S. Air Force · Deployed to Iraq",
+    bio: "Jake served in the U.S. Air Force and deployed to Iraq. As a founding board member, he is dedicated to building practical pathways for veterans, from job training in agriculture to food pantries that support veterans and their families.",
     email: "[Email TBD]",
   },
   {
