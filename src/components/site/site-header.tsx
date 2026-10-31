@@ -6,7 +6,9 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import { StarMark } from "./star-mark";
+
+// Respect an optional basePath for static assets in public/ (see next.config.ts).
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function SiteHeader() {
   // trailingSlash: true can yield "/contact/"; normalize for comparisons.
@@ -20,11 +22,22 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
         <Link
           href="/"
-          className="flex items-center gap-2 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="flex min-w-0 items-center gap-2.5 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           onClick={() => setOpen(false)}
         >
-          <StarMark className="size-6 text-brand-red-light" />
-          <span className="font-script text-[1.7rem] leading-none tracking-[0.01em] [-webkit-text-stroke:0.4px_currentColor] [paint-order:stroke_fill] [text-shadow:0_0_0.4px_currentColor,0_1px_1px_rgb(0_0_0/0.35)] sm:text-[2rem]">{site.name}</span>
+          <picture className="shrink-0">
+            <source srcSet={`${basePath}/logo/dvv-logo.webp`} type="image/webp" />
+            {/* eslint-disable-next-line @next/next/no-img-element -- static export, images unoptimized */}
+            <img
+              src={`${basePath}/logo/dvv-logo.png`}
+              alt=""
+              aria-hidden="true"
+              width={274}
+              height={160}
+              className="h-8 w-auto min-[400px]:h-10 sm:h-12"
+            />
+          </picture>
+          <span className="font-script whitespace-nowrap text-[1.45rem] leading-none min-[400px]:text-[1.7rem] tracking-[0.01em] [-webkit-text-stroke:0.4px_currentColor] [paint-order:stroke_fill] [text-shadow:0_0_0.4px_currentColor,0_1px_1px_rgb(0_0_0/0.35)] sm:text-[2rem]">{site.name}</span>
         </Link>
 
         <nav aria-label="Main" className="hidden md:block">
