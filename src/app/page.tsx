@@ -67,7 +67,7 @@ export default function Home() {
             <StarMark className="size-4 text-brand-red-light" />
             A {site.taxStatus} veterans organization
           </p>
-          <h1 className="mt-4 max-w-2xl font-heading text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="mt-4 max-w-[36rem] font-heading text-[2.3rem] leading-[1.05] font-bold tracking-[-0.01em] [font-variation-settings:'SOFT'_100,'WONK'_1,'opsz'_96] sm:text-[3.1rem]">
             Serving those who served in the Delaware Valley
           </h1>
           <p className="mt-6 max-w-xl text-lg text-blue-100">

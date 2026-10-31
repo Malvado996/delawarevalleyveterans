@@ -1,35 +1,29 @@
 import type { Metadata } from "next";
-import { Atkinson_Hyperlegible, Geist, Geist_Mono, Pinyon_Script } from "next/font/google";
+import { Fraunces, Source_Sans_3 } from "next/font/google";
 import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-sans",
+// "Farmhouse Porch" typography.
+// Body, nav and small labels: Source Sans 3, a clear humanist sans (distinct
+// "ai" vs "au" shapes, so "Mailing address" can't be misread).
+const sansFont = Source_Sans_3({
+  variable: "--font-source-sans",
   subsets: ["latin"],
-});
-
-// Atkinson Hyperlegible (Braille Institute) has distinct I / l / 1 shapes, so
-// small labels like "Mailing address" can't be misread as "ll" or a capital I.
-const labelFont = Atkinson_Hyperlegible({
-  variable: "--font-atkinson",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
-// Pinyon Script: a formal roundhand/copperplate script in the style of
-// 18th-century American penmanship. Used only for the header site title.
-const scriptFont = Pinyon_Script({
-  variable: "--font-pinyon",
-  subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Headings and the italic header title: Fraunces, a soft old-style serif.
+// Variable font with the SOFT / WONK / opsz axes; settings applied in CSS.
+const headingFont = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
+  weight: "variable",
+  style: ["normal", "italic"],
+  axes: ["SOFT", "WONK", "opsz"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -45,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${labelFont.variable} ${scriptFont.variable} h-full antialiased`}
+      className={`${sansFont.variable} ${headingFont.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <a

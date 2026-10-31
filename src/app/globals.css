@@ -12,13 +12,13 @@
   --color-brand-cream: var(--brand-cream);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
-  /* Small labels: clearer letterforms (see layout.tsx) */
-  --font-label: var(--font-atkinson);
-  /* Header site title: colonial-style script */
-  --font-script: var(--font-pinyon);
+  /* "Farmhouse Porch" typography (see layout.tsx) */
+  --font-sans: var(--font-source-sans);
+  --font-heading: var(--font-fraunces);
+  /* Small labels: same clear sans as body */
+  --font-label: var(--font-source-sans);
+  /* Header site title: Fraunces italic */
+  --font-title: var(--font-fraunces);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -141,5 +141,10 @@
   }
   html {
     @apply font-sans;
+  }
+  /* Fraunces: soft, slightly "wonky" farmhouse-sign shapes (opsz stays auto) */
+  .font-heading,
+  .font-title {
+    font-variation-settings: "SOFT" 100, "WONK" 1;
   }
 }

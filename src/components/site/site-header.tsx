@@ -37,7 +37,7 @@ export function SiteHeader() {
               className="h-10 w-auto min-[400px]:h-[52px] sm:h-16"
             />
           </picture>
-          <span className="font-script whitespace-nowrap text-[1.3rem] leading-none min-[400px]:text-[1.5rem] tracking-[0.01em] [-webkit-text-stroke:0.4px_currentColor] [paint-order:stroke_fill] [text-shadow:0_0_0.4px_currentColor,0_1px_1px_rgb(0_0_0/0.35)] sm:text-[2rem]">{site.name}</span>
+          <span className="font-title whitespace-nowrap text-[1.1rem] leading-none font-semibold italic min-[400px]:text-[1.3rem] sm:text-[1.65rem] [font-variation-settings:'SOFT'_100,'WONK'_1,'opsz'_72]">{site.name}</span>
         </Link>
 
         <nav aria-label="Main" className="hidden lg:block">
