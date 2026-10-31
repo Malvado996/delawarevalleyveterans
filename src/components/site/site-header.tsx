@@ -24,7 +24,7 @@ export function SiteHeader() {
           onClick={() => setOpen(false)}
         >
           <StarMark className="size-6 text-brand-red-light" />
-          <span className="font-script text-[1.7rem] leading-none tracking-normal sm:text-[2rem]">{site.name}</span>
+          <span className="font-script text-[1.7rem] leading-none tracking-[0.01em] [-webkit-text-stroke:0.4px_currentColor] [paint-order:stroke_fill] [text-shadow:0_0_0.4px_currentColor,0_1px_1px_rgb(0_0_0/0.35)] sm:text-[2rem]">{site.name}</span>
         </Link>
 
         <nav aria-label="Main" className="hidden md:block">
