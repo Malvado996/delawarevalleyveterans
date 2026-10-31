@@ -19,7 +19,61 @@ export const site = {
     { href: "/", label: "Home" },
     { href: "/mission", label: "Mission" },
     { href: "/membership", label: "Membership" },
+    { href: "/founders", label: "Founders & Board" },
     { href: "/donate", label: "Donate" },
     { href: "/contact", label: "Contact" },
   ],
 } as const;
+
+export type Founder = {
+  id: string;
+  firstName: string;
+  /** Real last name, or a bracketed placeholder rendered in amber. */
+  lastName: { value: string; placeholder: boolean };
+  boardTitle: string; // placeholder until confirmed
+  /** Short service summary; `branchPlaceholder` is shown in amber if set. */
+  service: string;
+  branchPlaceholder?: string;
+  bio: string;
+  email: string; // placeholder until confirmed
+  phone: string; // placeholder until confirmed
+};
+
+/**
+ * Founding board members. Bios use ONLY facts provided by the organization —
+ * do not add ranks, dates, units, or awards without each founder's sign-off.
+ * Bracketed values are PLACEHOLDERS — replace before launch.
+ */
+export const founders: Founder[] = [
+  {
+    id: "philip-rodrigues",
+    firstName: "Philip",
+    lastName: { value: "Rodrigues", placeholder: false },
+    boardTitle: "[Board title TBD]",
+    service: "U.S. Marine Corps Reserve · Deployed to Iraq",
+    bio: "Philip Rodrigues served in the U.S. Marine Corps Reserve and deployed to Iraq. As a founding board member of Delaware Valley Veterans, he is committed to helping fellow veterans find purpose and community through agriculture, recreational therapy, and hands-on job training.",
+    email: "[Email TBD]",
+    phone: "[Phone TBD]",
+  },
+  {
+    id: "jake",
+    firstName: "Jake",
+    lastName: { value: "[Last name TBD]", placeholder: true },
+    boardTitle: "[Board title TBD]",
+    service: "U.S. Air Force (full-time) · Deployed to Iraq",
+    bio: "Jake served full-time in the U.S. Air Force and deployed to Iraq. As a founding board member, he is dedicated to building practical pathways for veterans, from job training in agriculture to food pantries that support veterans and their families.",
+    email: "[Email TBD]",
+    phone: "[Phone TBD]",
+  },
+  {
+    id: "gervin",
+    firstName: "Gervin",
+    lastName: { value: "[Last name TBD]", placeholder: true },
+    boardTitle: "[Board title TBD]",
+    service: "Reserves · Global War on Terrorism era",
+    branchPlaceholder: "[Branch TBD]",
+    bio: "Gervin served in the reserves during the Global War on Terrorism era, supporting the mission from home rather than deploying overseas. As a founding board member, he helps lead the organization's work to connect veterans with the land, with meaningful work, and with each other.",
+    email: "[Email TBD]",
+    phone: "[Phone TBD]",
+  },
+];

@@ -93,6 +93,13 @@ export default function Home() {
             you are, when you were founded, and the communities you serve.]
           </Placeholder>
         </p>
+        <Link
+          href="/founders"
+          className="mt-4 inline-flex items-center gap-1 font-medium text-brand-navy underline underline-offset-4 hover:text-brand-red"
+        >
+          Meet our founders &amp; board
+          <ArrowRight className="size-4" aria-hidden="true" />
+        </Link>
       </section>
 
       <section className="bg-brand-cream" aria-labelledby="explore-heading">
