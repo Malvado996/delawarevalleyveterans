@@ -48,8 +48,8 @@ export const founders: Founder[] = [
     firstName: "Philip",
     lastName: { value: "Rodrigues", placeholder: false },
     boardTitle: "[Board title TBD]",
-    service: "U.S. Marine Corps Reserve · Deployed to Iraq",
-    bio: "Philip Rodrigues served in the U.S. Marine Corps Reserve and deployed to Iraq. As a founding board member of Delaware Valley Veterans, he is committed to helping fellow veterans find purpose and community through agriculture, recreational therapy, and hands-on job training.",
+    service: "U.S. Marine Corps · Deployed to Iraq",
+    bio: "Philip Rodrigues served in the U.S. Marine Corps and deployed to Iraq. As a founding board member of Delaware Valley Veterans, he is committed to helping fellow veterans find purpose and community through agriculture, recreational therapy, and hands-on job training.",
     email: "[Email TBD]",
   },
   {
