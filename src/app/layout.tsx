@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Atkinson_Hyperlegible, Geist, Geist_Mono } from "next/font/google";
+import { Atkinson_Hyperlegible, Geist, Geist_Mono, Pinyon_Script } from "next/font/google";
 import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
 import { site } from "@/lib/site";
@@ -16,6 +16,15 @@ const labelFont = Atkinson_Hyperlegible({
   variable: "--font-atkinson",
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+// Pinyon Script: a formal roundhand/copperplate script in the style of
+// 18th-century American penmanship. Used only for the header site title.
+const scriptFont = Pinyon_Script({
+  variable: "--font-pinyon",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -36,7 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${labelFont.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${labelFont.variable} ${scriptFont.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <a

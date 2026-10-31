@@ -20,11 +20,11 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
         <Link
           href="/"
-          className="flex items-center gap-2 rounded font-heading text-lg font-bold tracking-tight focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="flex items-center gap-2 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           onClick={() => setOpen(false)}
         >
           <StarMark className="size-6 text-brand-red-light" />
-          <span>{site.name}</span>
+          <span className="font-script text-[1.7rem] leading-none tracking-normal sm:text-[2rem]">{site.name}</span>
         </Link>
 
         <nav aria-label="Main" className="hidden md:block">
