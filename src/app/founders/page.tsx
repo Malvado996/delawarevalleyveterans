@@ -58,8 +58,7 @@ export default function FoundersPage() {
                     </div>
                   </CardHeader>
                   <CardContent className="flex-1">
-                    <p className="leading-relaxed">{f.service}</p>
-                    <p className="mt-3 leading-relaxed">{f.bio}</p>
+                                        <p className="leading-relaxed">{f.bio}</p>
                   </CardContent>
                   <CardFooter className="flex-col items-start gap-2 text-sm">
                     <p className="flex items-center gap-2">

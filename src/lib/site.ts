@@ -31,8 +31,6 @@ export type Founder = {
   lastName: { value: string; placeholder: boolean };
   /** Board office, shown prominently on the card. */
   title: string;
-  /** Service sentence, shown as the first line of the bio copy. */
-  service: string;
   branchPlaceholder?: string;
   bio: string;
   email: string;
@@ -49,8 +47,7 @@ export const founders: Founder[] = [
     firstName: "Chase",
     lastName: { value: "Girvin", placeholder: false },
     title: "President",
-    service: "He served in the U.S. Marine Corps.",
-    bio: "As a founding board member, he helps lead the organization's work to connect veterans with the land, with meaningful work, and with each other.",
+    bio: "He served in the U.S. Marine Corps as a founding board member. He helps lead the organization's work to connect veterans with the land, with meaningful work, and with each other.",
     email: "chase@delawarevalleyveterans.org",
   },
   {
@@ -58,8 +55,7 @@ export const founders: Founder[] = [
     firstName: "Philip",
     lastName: { value: "Rodrigues", placeholder: false },
     title: "Vice President",
-    service: "He served in the U.S. Marine Corps.",
-    bio: "As a founding board member of Delaware Valley Veterans, he is committed to helping fellow veterans find purpose and community through agriculture, recreational therapy, and hands-on job training.",
+    bio: "He served in the U.S. Marine Corps as a founding board member of Delaware Valley Veterans. He is committed to helping fellow veterans find purpose and community through agriculture, recreational therapy, and hands-on job training.",
     email: "philip@delawarevalleyveterans.org",
   },
   {
@@ -67,8 +63,7 @@ export const founders: Founder[] = [
     firstName: "Jake",
     lastName: { value: "[Last name TBD]", placeholder: true },
     title: "Secretary/Treasurer",
-    service: "He served in the U.S. Air Force.",
-    bio: "As a founding board member, he is dedicated to building practical pathways for veterans, from job training in agriculture to food pantries that support veterans and their families.",
+    bio: "He served in the U.S. Air Force as a founding board member. He is dedicated to building practical pathways for veterans, from job training in agriculture to food pantries that support veterans and their families.",
     email: "jake@delawarevalleyveterans.org",
   },
 ];
