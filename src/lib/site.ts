@@ -58,7 +58,7 @@ export const founders: Founder[] = [
     firstName: "Philip",
     lastName: { value: "Rodrigues", placeholder: false },
     title: "Vice President",
-    service: "I served in the U.S. Marine Corps.",
+    service: "He served in the U.S. Marine Corps.",
     bio: "As a founding board member of Delaware Valley Veterans, he is committed to helping fellow veterans find purpose and community through agriculture, recreational therapy, and hands-on job training.",
     email: "philip@delawarevalleyveterans.org",
   },
