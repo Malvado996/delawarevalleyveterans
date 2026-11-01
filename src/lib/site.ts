@@ -61,7 +61,7 @@ export const founders: Founder[] = [
   {
     id: "jake",
     firstName: "Jake",
-    lastName: { value: "[Last name TBD]", placeholder: true },
+    lastName: { value: "Emrick", placeholder: false },
     title: "Secretary/Treasurer",
     bio: "He served in the U.S. Air Force and is a founding board member. He is dedicated to building practical pathways for veterans, from job training in agriculture to food pantries that support veterans and their families.",
     email: "jake@delawarevalleyveterans.org",
