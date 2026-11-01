@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Mail } from "lucide-react";
+import { Mail, UserRound } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { PageHeader } from "@/components/site/page-header";
-import { Placeholder, PlaceholderNotice } from "@/components/site/placeholder";
-import { StarMark } from "@/components/site/star-mark";
+import { Placeholder } from "@/components/site/placeholder";
 import { founders, site } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Founders & Board" };
@@ -23,19 +22,19 @@ export default function FoundersPage() {
           therapy, job training, and food pantries.
         </p>
 
-        <PlaceholderNotice>
-          Last names, board titles, and contact details are still being
-          confirmed and will be added before launch.
-        </PlaceholderNotice>
-
         <ul className="grid gap-6 md:grid-cols-3">
           {founders.map((f) => (
             <li key={f.id}>
               <section aria-labelledby={`${f.id}-heading`} className="h-full">
                 <Card className="h-full border-t-4 border-t-brand-navy">
                   <CardHeader>
-                    <div className="flex items-start gap-3">
-                      <StarMark className="mt-1 size-5 shrink-0 text-brand-red" />
+                    <div className="flex items-center gap-4">
+                      <div
+                        aria-hidden="true"
+                        className="flex size-16 shrink-0 items-center justify-center rounded-full bg-brand-cream ring-2 ring-brand-navy"
+                      >
+                        <UserRound className="size-9 text-brand-navy" strokeWidth={1.75} />
+                      </div>
                       <div>
                         <h2
                           id={`${f.id}-heading`}
@@ -58,7 +57,7 @@ export default function FoundersPage() {
                     </div>
                   </CardHeader>
                   <CardContent className="flex-1">
-                                        <p className="leading-relaxed">{f.bio}</p>
+                    <p className="leading-relaxed">{f.bio}</p>
                   </CardContent>
                   <CardFooter className="flex-col items-start gap-2 text-sm">
                     <p className="flex items-center gap-2">
