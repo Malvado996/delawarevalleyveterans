@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 export function SiteFooter() {
   return (
     <footer className="mt-auto bg-brand-navy-dark text-blue-100">
-      <div className="h-1 bg-brand-red" aria-hidden="true" />
+      <div className="h-2 bg-brand-red" aria-hidden="true" />
       <div className="mx-auto grid max-w-5xl gap-8 px-4 py-10 sm:grid-cols-2">
         <div>
           <p className="font-heading text-lg font-bold text-white">{site.name}</p>
@@ -32,6 +32,7 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <p className="mx-auto max-w-5xl px-4 py-4 text-xs text-blue-200">
           &copy; 2026 {site.name}. All rights reserved.
+          <span className="block sm:inline sm:ml-2">Last updated {process.env.NEXT_PUBLIC_LAST_UPDATED}</span>
         </p>
       </div>
     </footer>

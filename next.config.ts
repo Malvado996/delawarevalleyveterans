@@ -1,4 +1,16 @@
 import type { NextConfig } from "next";
+import { execSync } from "node:child_process";
+
+// "Last updated" date for the footer, taken from the latest git commit.
+function lastUpdated(): string {
+  let d = new Date();
+  try {
+    d = new Date(execSync("git log -1 --format=%cI").toString().trim());
+  } catch {}
+  return d.toLocaleDateString("en-US", {
+    year: "numeric", month: "long", day: "numeric", timeZone: "America/New_York",
+  });
+}
 
 /**
  * Static export for GitHub Pages.
@@ -14,6 +26,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {
   output: "export",
+  env: { NEXT_PUBLIC_LAST_UPDATED: lastUpdated() },
   images: { unoptimized: true },
   trailingSlash: true,
   basePath,

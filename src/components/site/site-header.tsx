@@ -18,7 +18,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-brand-navy text-white shadow-sm">
-      <div className="h-1 bg-brand-red" aria-hidden="true" />
+      <div className="h-2 bg-brand-red" aria-hidden="true" />
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-2.5 sm:gap-4">
         <Link
           href="/"
