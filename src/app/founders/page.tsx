@@ -54,22 +54,12 @@ export default function FoundersPage() {
                           {f.title}
                         </p>
                         <p className="mt-0.5 text-sm">Founding Board Member</p>
-                        <p className="mt-1 font-label text-sm font-bold text-brand-red">
-                          {f.service}
-                          {f.branchPlaceholder ? (
-                            <>
-                              {" · "}
-                              <Placeholder className="font-normal">
-                                {f.branchPlaceholder}
-                              </Placeholder>
-                            </>
-                          ) : null}
-                        </p>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="flex-1">
-                    <p className="leading-relaxed">{f.bio}</p>
+                    <p className="leading-relaxed">{f.service}</p>
+                    <p className="mt-3 leading-relaxed">{f.bio}</p>
                   </CardContent>
                   <CardFooter className="flex-col items-start gap-2 text-sm">
                     <p className="flex items-center gap-2">
