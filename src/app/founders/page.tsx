@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Mail, UserRound } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { PageHeader } from "@/components/site/page-header";
 import { Placeholder } from "@/components/site/placeholder";
 import { founders, site } from "@/lib/site";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = { title: "Founders & Board" };
 
@@ -31,9 +33,18 @@ export default function FoundersPage() {
                     <div className="flex items-center gap-4">
                       <div
                         aria-hidden="true"
-                        className="flex size-16 shrink-0 items-center justify-center rounded-full bg-brand-cream ring-2 ring-brand-navy"
+                        className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-full bg-brand-cream ring-2 ring-brand-navy"
                       >
-                        <UserRound className="size-9 text-brand-navy" strokeWidth={1.75} />
+                        <picture>
+                          <source srcSet={`${basePath}/founders/placeholder-cat.webp`} type="image/webp" />
+                          <img
+                            src={`${basePath}/founders/placeholder-cat.jpg`}
+                            alt=""
+                            width={64}
+                            height={64}
+                            className="size-16 object-cover"
+                          />
+                        </picture>
                       </div>
                       <div>
                         <h2
